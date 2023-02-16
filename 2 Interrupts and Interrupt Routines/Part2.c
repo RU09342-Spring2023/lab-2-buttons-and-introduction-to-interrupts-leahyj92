@@ -60,11 +60,10 @@ int main(void)
 }
 
 // Port 2 interrupt service routine
-#pragma vector=PORT2_VECTOR
-__interrupt void Port_2(void)
+#pragma vector=PORT4_VECTOR
+__interrupt void Port_4(void)
 {
-    // @TODO You might need to modify this based on your approach to the lab
-    P2IFG &= ~BIT3;                         // Clear P1.3 IFG
-    ToggleEnable ^= 0x01;                   // Enable if the toggle should be active
+    P4IFG &= ~BIT1;
+
 }
 
